@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterbackground"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/watertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/watermin"
+        android:layout_alignRight="@+id/watermin"
+        android:layout_below="@+id/watermin"
+        android:layout_gravity="center_horizontal"
+        android:text="Seconds Left:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+
+
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="normal|bold|italic" />
+
+    <TextView
+        android:id="@+id/watermin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:text="Minutes Left:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+
+
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="normal|bold|italic" />
+
+    <Button
+        android:id="@+id/waterstopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="46dp"
+        android:layout_toLeftOf="@+id/waterresumeButton"
+        android:layout_toStartOf="@+id/waterresumeButton"
+        android:background="#006880"
+        android:text="STOP"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/waterresumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/waterstopButton"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#006880"
+        android:text="RESUME"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/waterresetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/waterresumeButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/waterresumeButton"
+        android:layout_toRightOf="@+id/waterresumeButton"
+        android:background="#006880"
+        android:text="RESET"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/mainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/waterresumeButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/waterresumeButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:background="#006880"
+        android:text="HOME"
+        android:textColor="#ffffff" />
+</RelativeLayout>

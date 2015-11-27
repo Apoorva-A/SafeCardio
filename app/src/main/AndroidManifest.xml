@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="2"
+    android:versionName="1.1"
+    package="aa3vs.cs2110.virginia.edu.cardiosafe">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="CardioSafe">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Running"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Water"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CountDown"
+            android:parentActivityName=".Running">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.Running" />
+        </activity>
+        <activity
+            android:name=".CountDownWater"
+            android:parentActivityName=".Water">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.Water" />
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+</manifest>

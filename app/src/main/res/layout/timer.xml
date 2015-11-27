@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbackground"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/landmin"
+        android:layout_gravity="center_horizontal"
+        android:text="Seconds Left:"
+
+
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="normal|bold|italic" />
+
+    <TextView
+        android:id="@+id/landmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/emergency"
+        android:layout_gravity="center_horizontal"
+
+        android:text=" Minutes Left:"
+
+
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="normal|bold|italic" />
+
+    <TextView
+        android:id="@+id/emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:text="Emergency Timer:"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="normal|bold|italic" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/resumeButton"
+        android:layout_alignLeft="@+id/resumeButton"
+        android:layout_alignStart="@+id/resumeButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="46dp"
+        android:background="#e4da9d"
+        android:text="STOP" />
+
+    <Button
+        android:id="@+id/resumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#e4da9d"
+        android:text="RESUME" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resumeButton"
+        android:layout_alignStart="@+id/resumeButton"
+        android:layout_below="@+id/resumeButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="58dp"
+        android:background="#e4da9d"
+        android:text="RESET" />
+
+    <Button
+        android:id="@+id/mainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resetButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/resetButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:background="#e4da9d"
+        android:text="HOME" />
+</RelativeLayout>
