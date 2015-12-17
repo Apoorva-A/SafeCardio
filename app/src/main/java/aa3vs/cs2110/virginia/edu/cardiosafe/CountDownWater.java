@@ -35,6 +35,8 @@ public class CountDownWater extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.timerwater);
 
+
+
         //Sets up textviews and buttons
         count = (TextView) findViewById(R.id.watertime);
         countmin = (TextView) findViewById(R.id.watermin);

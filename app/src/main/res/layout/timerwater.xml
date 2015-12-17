@@ -42,37 +42,38 @@
         android:id="@+id/waterstopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mainButton"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="46dp"
-        android:layout_toLeftOf="@+id/waterresumeButton"
-        android:layout_toStartOf="@+id/waterresumeButton"
         android:background="#006880"
         android:text="STOP"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/watertime"
+        android:layout_alignLeft="@+id/waterresumeButton"
+        android:layout_alignStart="@+id/waterresumeButton"
+        android:layout_marginTop="56dp" />
 
     <Button
         android:id="@+id/waterresumeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/waterstopButton"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:background="#006880"
         android:text="RESUME"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/waterresetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/waterresumeButton"
         android:layout_gravity="center_horizontal"
-        android:layout_toEndOf="@+id/waterresumeButton"
-        android:layout_toRightOf="@+id/waterresumeButton"
         android:background="#006880"
         android:text="RESET"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_above="@+id/mainButton"
+        android:layout_alignLeft="@+id/mainButton"
+        android:layout_alignStart="@+id/mainButton"
+        android:layout_marginBottom="56dp" />
 
     <Button
         android:id="@+id/mainButton"
