@@ -43,6 +43,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
         </activity>
+
         <activity
             android:name=".Water"
             android:parentActivityName=".MainActivity">
