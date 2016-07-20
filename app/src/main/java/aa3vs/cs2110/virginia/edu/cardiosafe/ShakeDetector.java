@@ -1,7 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
 
 //Imports
-
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;

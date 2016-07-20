@@ -1,5 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
 
+//Imports
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -8,18 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by Apoorva on 7/19/2016.
- */
 public class HowTo extends ActionBarActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.howto);
 
+        //Homebutton
         final Button homeButton = (Button) findViewById(R.id.mainButton);
-
-
         homeButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -51,8 +48,7 @@ public class HowTo extends ActionBarActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    //Will open up either run or water page
-
+    //Will open up mainActivity
     public void goHome(View homeButton) {
         Intent intent = new Intent(this, MainActivity.class);
 

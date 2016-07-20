@@ -5,50 +5,41 @@
     android:background="@drawable/newbackground"
     android:orientation="vertical">
 
-
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/headerButton"
+        android:stateListAnimator="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:stateListAnimator="@null"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
-        android:text="SafeCardio"
-        android:textColor="#09cde7"
-        android:textSize="15sp"
-        android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="SafeCardio"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/mainButton"
+        android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:stateListAnimator="@null"
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
         android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="HOME"
         android:textColor="#09cde7"
         android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
@@ -62,7 +53,7 @@
         android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingLeft="10dp"
-        android:layout_below="@+id/textView7"
+        android:layout_above="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -109,7 +100,7 @@
         android:textColor="#ffffff"
         android:textSize="@dimen/abc_text_size_display_3_material"
         android:textStyle="bold|normal"
-        android:layout_below="@+id/button7"
+        android:layout_below="@+id/headerButton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

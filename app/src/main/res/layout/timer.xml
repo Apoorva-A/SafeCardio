@@ -5,15 +5,12 @@
     android:background="@drawable/newbackground"
     android:orientation="vertical">
 
-
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="    Seconds Left:"
-
-
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffff"
@@ -28,10 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-
         android:text="    Minutes Left:"
-
-
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffff"
@@ -113,10 +107,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="SafeCardio"
         android:textColor="#09cde7"
         android:textSize="15sp"
@@ -135,10 +125,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="HOME"
         android:textColor="#09cde7"
         android:textSize="15sp"
@@ -155,9 +141,9 @@
         android:src="@drawable/stop"
         android:backgroundTint="#09cde7"
         android:id="@+id/imageButton10"
-        android:layout_alignTop="@+id/stopButton"
-        android:layout_toRightOf="@+id/emergency"
-        android:layout_toEndOf="@+id/emergency" />
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/time"
+        android:layout_toEndOf="@+id/time" />
 
     <ImageButton
         android:layout_width="wrap_content"

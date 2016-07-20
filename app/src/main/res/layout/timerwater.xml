@@ -13,8 +13,6 @@
         android:layout_gravity="center_horizontal"
         android:text="    Seconds Left:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-
-
         android:textColor="#ffffff"
         android:textSize="30dp"
         android:textStyle="normal|bold|italic"
@@ -30,8 +28,6 @@
         android:layout_marginTop="44dp"
         android:text="     Minutes Left:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-
-
         android:textColor="#ffffff"
         android:textSize="30dp"
         android:textStyle="normal|bold|italic"
@@ -95,10 +91,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="SafeCardio"
         android:textColor="#09cde7"
         android:textSize="15sp"
@@ -117,10 +109,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="HOME"
         android:textColor="#09cde7"
         android:textSize="15sp"
@@ -147,7 +135,7 @@
         android:id="@+id/imageButton11"
         android:src="@drawable/play"
         android:backgroundTint="#09cde7"
-        android:layout_above="@+id/waterresetButton"
+        android:layout_alignBottom="@+id/waterresumeButton"
         android:layout_alignLeft="@+id/imageButton12"
         android:layout_alignStart="@+id/imageButton12" />
 
@@ -157,9 +145,9 @@
         android:backgroundTint="#09cde7"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton12"
-        android:layout_marginRight="56dp"
-        android:layout_marginEnd="56dp"
         android:layout_alignBottom="@+id/waterresetButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toRightOf="@+id/watermin"
+        android:layout_toEndOf="@+id/watermin"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp" />
 </RelativeLayout>

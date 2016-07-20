@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//Imports
 
+//Imports
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-//Main Screen Activity
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -72,32 +71,26 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-    //Will open up either run or water page
-
+    //Button methods
     public void openLandOptions(View runButton) {
         Intent intent = new Intent(this, Running.class);
-
         startActivity(intent);
     }
 
     public void openWaterOptions(View waterButton) {
         Intent intent = new Intent(this, Water.class);
-
         startActivity(intent);
     }
 
     public void openHowTo(View howToButton) {
         Intent intent = new Intent(this, HowTo.class);
-
         startActivity(intent);
     }
     public void openAbout(View aboutButton) {
         Intent intent = new Intent(this, About.class);
-
         startActivity(intent);
     }
 }

@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//imports
 
+//imports
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -25,15 +25,13 @@ public class Running extends ActionBarActivity {
         setContentView(R.layout.runscreen);
 
         //Buttons and Fields
-        saveButton = (Button) findViewById(R.id.savephoneNo);
         timeRun = (EditText) findViewById(R.id.time);
         phoneNumber = (EditText) findViewById(R.id.phoneNo);
 
-
+        saveButton = (Button) findViewById(R.id.savephoneNo);
         saveButton.setOnClickListener(saveButtonListener);
 
         homeButton = (Button) findViewById(R.id.homeButton);
-
         homeButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -51,7 +49,6 @@ public class Running extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-
             if (timeRun.getText().length() > 0 && phoneNumber.getText().length() > 0) {
                 String howlong = timeRun.getText().toString();
                 String contact = phoneNumber.getText().toString();
@@ -59,7 +56,6 @@ public class Running extends ActionBarActivity {
                 intent.putExtra("time-length", howlong);
                 intent.putExtra("phone-number", contact);
                 startActivity(intent);
-
             }
         }
     };
@@ -83,13 +79,11 @@ public class Running extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void goHome(View homeButton) {
         Intent intent = new Intent(this, MainActivity.class);
-
         startActivity(intent);
     }
 

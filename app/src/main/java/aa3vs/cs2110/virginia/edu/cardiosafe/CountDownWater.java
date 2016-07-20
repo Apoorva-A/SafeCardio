@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//Import statements
 
+//Import statements
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
@@ -35,8 +35,6 @@ public class CountDownWater extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.timerwater);
 
-
-
         //Sets up textviews and buttons
         count = (TextView) findViewById(R.id.watertime);
         countmin = (TextView) findViewById(R.id.watermin);
@@ -63,17 +61,13 @@ public class CountDownWater extends ActionBarActivity {
                     count.setText("Seconds Left: " + ((millisUntilFinished / 1000) - ((int) (millisUntilFinished / 60000)) * 60));
                 }
                 runningtime = (int) millisUntilFinished / 1000;
-
             }
 
             @Override
             public void onFinish() {
                 sendSMSMessage();
-
             }
-
         };
-
 
         tim.start();
         //Takes you to home screen
@@ -128,16 +122,11 @@ public class CountDownWater extends ActionBarActivity {
                             count.setText("Seconds Left: " + y);
                         }
                         runningtime = (int) millisUntilFinished / 1000;
-
                     }
-
 
                     public void onFinish() {
                         sendSMSMessage();
-
-
                     }
-
                 };
                 timmytrue = true;
                 timmy.start();
@@ -160,7 +149,6 @@ public class CountDownWater extends ActionBarActivity {
         }
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -179,9 +167,7 @@ public class CountDownWater extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
 
 }

@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//Imports
 
+//Imports
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

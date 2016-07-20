@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//imports
 
+//imports
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -11,9 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-//Same as Running Class
+//Water Screen
 public class Water extends ActionBarActivity {
 
+    //Buttons to be used
     private Button saveButton;
     private EditText timeRun;
     private EditText phoneNumber;
@@ -24,12 +25,10 @@ public class Water extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.waterscreen);
 
-        saveButton = (Button) findViewById(R.id.watersavephoneNo);
         timeRun = (EditText) findViewById(R.id.watertime);
         phoneNumber = (EditText) findViewById(R.id.waterphoneNo);
+
         waterHomeButton = (Button) findViewById(R.id.waterHomeButton);
-
-
         waterHomeButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -38,8 +37,7 @@ public class Water extends ActionBarActivity {
                 }
         );
 
-
-
+        saveButton = (Button) findViewById(R.id.watersavephoneNo);
         saveButton.setOnClickListener(saveButtonListener);
 
 
@@ -50,7 +48,6 @@ public class Water extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-
             if (timeRun.getText().length() > 0 && phoneNumber.getText().length() > 0) {
                 String howlong = timeRun.getText().toString();
                 String contact = phoneNumber.getText().toString();
@@ -58,7 +55,6 @@ public class Water extends ActionBarActivity {
                 intent.putExtra("time-length", howlong);
                 intent.putExtra("phone-number", contact);
                 startActivity(intent);
-
             }
         }
     };
@@ -82,13 +78,11 @@ public class Water extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void goHome(View waterHomeButton) {
         Intent intent = new Intent(this, MainActivity.class);
-
         startActivity(intent);
     }
 

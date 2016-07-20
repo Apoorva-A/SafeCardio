@@ -5,7 +5,6 @@
     android:background="@drawable/newbackground"
     android:orientation="vertical">
 
-
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
@@ -14,10 +13,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="SafeCardio"
         android:textColor="#09cde7"
         android:textSize="15sp"
@@ -36,10 +31,6 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:padding="10dip"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="0.6"
         android:text="HOME"
         android:textColor="#09cde7"
         android:textSize="15sp"

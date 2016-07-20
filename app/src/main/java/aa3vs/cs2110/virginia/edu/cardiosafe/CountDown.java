@@ -1,6 +1,6 @@
 package aa3vs.cs2110.virginia.edu.cardiosafe;
-//Import Statements
 
+//Import Statements
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -34,8 +34,8 @@ public class CountDown extends ActionBarActivity {
     private Button mainButton;
     //Miscellaneous variables
     private int runningtime;
-    private CountDownTimer timmy;
-    private boolean timmytrue;
+    private CountDownTimer timer;
+    private boolean isTimer;
     private String number;
 
     // OnCreate, sets up page
@@ -59,7 +59,7 @@ public class CountDown extends ActionBarActivity {
         number = extras.getString("phone-number");
         final int t = Integer.parseInt(time);
         runningtime = Integer.parseInt(time);
-        timmytrue = false;
+        isTimer = false;
 
         //Main Timer, Starts immediately, sends text if not stopped by time limit.
         final CountDownTimer tim = new CountDownTimer(60000 * runningtime, 1000) {
@@ -71,9 +71,7 @@ public class CountDown extends ActionBarActivity {
                     count.setText("Seconds Left: " + ((millisUntilFinished / 1000) - ((int) (millisUntilFinished / 60000)) * 60));
                 }
                 runningtime = (int) millisUntilFinished / 1000;
-
             }
-
 
             public void onFinish() {
                 sendSMSMessage();
@@ -91,12 +89,10 @@ public class CountDown extends ActionBarActivity {
                     emer.setText("Emergency Timer: " + (int) (millisUntilFinished / 60000) + ":" + ((millisUntilFinished / 1000) - ((int) (millisUntilFinished / 60000)) * 60));
                 }
             }
-
             public void onFinish() {
                 sendAlertSMSMessage();
             }
         };
-
 
         //Start timer
         tim.start();
@@ -120,8 +116,8 @@ public class CountDown extends ActionBarActivity {
                 String s = countmin.getText().toString();
                 runningtime += 60 * Integer.parseInt(s.substring(s.indexOf(":") + 2, s.length()));
                 tim.cancel();
-                if (timmytrue) {
-                    timmy.cancel();
+                if (isTimer) {
+                    timer.cancel();
                 }
 
             }
@@ -132,19 +128,19 @@ public class CountDown extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 tim.cancel();
-                if (timmytrue) {
-                    timmy.cancel();
+                if (isTimer) {
+                    timer.cancel();
                 }
                 tim.start();
             }
         });
 
         // Resumes if you have previously stopped
-        // Needed to create a new timer to do this (called timmy), acts the same as tim.
+        // Needed to create a new timer to do this (called timer), acts the same as original timer.
         resumeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timmy = new CountDownTimer(runningtime * 1000, 1000) {
+                timer = new CountDownTimer(runningtime * 1000, 1000) {
                     public void onTick(long millisUntilFinished) {
                         int x = (int)(millisUntilFinished/60000);
                         int y = (int)(millisUntilFinished/1000);
@@ -168,8 +164,8 @@ public class CountDown extends ActionBarActivity {
                     }
 
                 };
-                timmytrue = true;
-                timmy.start();
+                isTimer = true;
+                timer.start();
             }
         });
 
