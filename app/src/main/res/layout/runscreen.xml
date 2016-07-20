@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainrunbackground"
+    android:background="@drawable/newbackground"
     android:orientation="vertical">
 
     <TextView
@@ -11,68 +11,103 @@
         android:layout_height="wrap_content"
         android:text="How many minutes will you be gone?"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="#92f2ff"
         android:textSize="20dp"
-        android:textStyle="normal|bold|" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:textStyle="normal|bold|"
+        android:layout_above="@+id/time"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="61dp"
-        android:text="Starting will trigger your run timer and emergency timer. The emergency timer refreshes as your phone shakes in your pocket. If either timer hits 0, we will message your emergency contact."
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        android:textStyle="normal|bold|" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/time"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
         android:inputType="number"
-        android:textColor="#ffffff" />
+        android:textColor="#92f2ff"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/time"
         android:text="Emergency contact number:"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="#92f2ff"
         android:textSize="20dp"
-        android:textStyle="normal|bold|" />
+        android:textStyle="normal|bold|"
+        android:layout_alignTop="@+id/phoneNo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/phoneNo"
         android:layout_width="fill_parent"
         android:layout_height="150px"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
         android:gravity="top"
         android:inputType="number"
-        android:textColor="#ffffff" />
+        android:textColor="#92f2ff"
+        android:layout_above="@+id/savephoneNo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/savephoneNo"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:height="60dp"
+        android:background="#50ccdd"
+        android:textColor="#FFFFFF"
+        android:text="Start!"
+        android:layout_marginBottom="132dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
+        android:text="SafeCardio"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:onClick="goHome"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
+        android:text="HOME"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:height="60dp"
-        android:background="#2e797a"
-        android:text="Start!" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

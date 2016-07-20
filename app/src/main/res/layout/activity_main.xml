@@ -11,31 +11,6 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/splashScreenText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-medium"
-        android:text="SafeCardio"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#2ec6d1"
-        android:textSize="@dimen/abc_text_size_display_3_material"
-        android:textStyle="normal|bold|" />
-
-    <TextView
-        android:id="@+id/splashScreenText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/splashScreenText1"
-        android:layout_centerHorizontal="true"
-        android:text="Making exercising safer"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffff"
-        android:textStyle="normal|bold|italic" />
-
-
     <Button
         android:id="@+id/waterButton"
         android:layout_width="wrap_content"
@@ -54,13 +29,13 @@
         android:gravity="left|center_vertical"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@+id/runButton"
+        android:layout_above="@+id/button2"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <Button
@@ -80,12 +55,11 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@+id/splashScreenText"
+        android:layout_alignBottom="@+id/imageButton8"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="109dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/imageButton8"
+        android:layout_alignEnd="@+id/imageButton8" />
 
     <Button
         android:id="@+id/button"
@@ -94,7 +68,6 @@
         android:stateListAnimator="@null"
         android:background="#213c62"
         android:gravity="left|center_vertical"
-        android:onClick="openWaterOptions"
         android:padding="10dip"
         android:shadowColor="#000000"
         android:shadowDx="1"
@@ -118,7 +91,6 @@
         android:layout_height="wrap_content"
         android:background="#808085"
         android:gravity="left|center_vertical"
-        android:onClick="openLandOptions"
         android:padding="10dip"
         android:shadowColor="#000000"
         android:shadowDx="1"
@@ -129,11 +101,11 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@+id/waterButton"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/imageButton5"
+        android:layout_alignEnd="@+id/imageButton5" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -141,9 +113,9 @@
         android:id="@+id/imageButton"
         android:src="@drawable/water"
         android:backgroundTint="#c12b21"
-        android:layout_alignBottom="@+id/waterButton"
-        android:layout_toLeftOf="@+id/splashScreenText1"
-        android:layout_toStartOf="@+id/splashScreenText1" />
+        android:layout_alignTop="@+id/waterButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -161,9 +133,9 @@
         android:id="@+id/imageButton3"
         android:src="@drawable/howto"
         android:backgroundTint="#808085"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignLeft="@+id/imageButton"
-        android:layout_alignStart="@+id/imageButton" />
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -174,4 +146,99 @@
         android:layout_alignTop="@+id/button"
         android:layout_alignLeft="@+id/imageButton3"
         android:layout_alignStart="@+id/imageButton3" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:backgroundTint="#213c62"
+        android:id="@+id/imageButton5"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:backgroundTint="#808085"
+        android:id="@+id/imageButton6"
+        android:layout_above="@+id/button"
+        android:layout_alignLeft="@+id/imageButton5"
+        android:layout_alignStart="@+id/imageButton5" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:backgroundTint="#c12b21"
+        android:id="@+id/imageButton7"
+        android:layout_alignBottom="@+id/waterButton"
+        android:layout_alignLeft="@+id/imageButton6"
+        android:layout_alignStart="@+id/imageButton6" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:backgroundTint="#28768f"
+        android:id="@+id/imageButton8"
+        android:layout_above="@+id/waterButton"
+        android:layout_alignLeft="@+id/imageButton7"
+        android:layout_alignStart="@+id/imageButton7" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
+        android:text="Apoorva Arunkumar"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton9"
+        android:src="@drawable/copyright"
+        android:backgroundTint="#FFFFFF"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toRightOf="@+id/imageButton4"
+        android:layout_toEndOf="@+id/imageButton4" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
+        android:text="SafeCardio"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

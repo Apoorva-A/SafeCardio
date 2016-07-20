@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/waterbackground"
+    android:background="@drawable/newbackground"
     android:orientation="vertical">
 
 
@@ -10,81 +10,156 @@
         android:id="@+id/watertime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/watermin"
-        android:layout_alignRight="@+id/watermin"
-        android:layout_below="@+id/watermin"
         android:layout_gravity="center_horizontal"
-        android:text="Seconds Left:"
+        android:text="    Seconds Left:"
         android:textAppearance="?android:attr/textAppearanceLarge"
 
 
         android:textColor="#ffffff"
         android:textSize="30dp"
-        android:textStyle="normal|bold|italic" />
+        android:textStyle="normal|bold|italic"
+        android:layout_below="@+id/watermin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/watermin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
-        android:text="Minutes Left:"
+        android:layout_marginTop="44dp"
+        android:text="     Minutes Left:"
         android:textAppearance="?android:attr/textAppearanceLarge"
 
 
         android:textColor="#ffffff"
         android:textSize="30dp"
-        android:textStyle="normal|bold|italic" />
+        android:textStyle="normal|bold|italic"
+        android:layout_below="@+id/button8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/waterstopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="#006880"
-        android:text="STOP"
+        android:gravity="left|center_vertical"
+        android:background="#50ccdd"
+        android:text="                                      STOP"
         android:textColor="#ffffff"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/watertime"
-        android:layout_alignLeft="@+id/waterresumeButton"
-        android:layout_alignStart="@+id/waterresumeButton"
-        android:layout_marginTop="56dp" />
+        android:layout_alignParentLeft="true"
+        android:stateListAnimator="@null"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/waterresumeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="#006880"
-        android:text="RESUME"
+        android:gravity="left|center_vertical"
+        android:background="#50ccdd"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:stateListAnimator="@null"
+        android:text="                                      RESUME"
         android:textColor="#ffffff"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/waterstopButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/waterresetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="#006880"
-        android:text="RESET"
+        android:gravity="left|center_vertical"
+        android:background="#50ccdd"
+        android:text="                                      RESET"
         android:textColor="#ffffff"
-        android:layout_above="@+id/mainButton"
-        android:layout_alignLeft="@+id/mainButton"
-        android:layout_alignStart="@+id/mainButton"
-        android:layout_marginBottom="56dp" />
+        android:stateListAnimator="@null"
+        android:layout_below="@+id/waterresumeButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
+        android:text="SafeCardio"
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/mainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/waterresumeButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/waterresumeButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="48dp"
-        android:background="#006880"
+        android:stateListAnimator="@null"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.6"
         android:text="HOME"
-        android:textColor="#ffffff" />
+        android:textColor="#09cde7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stop"
+        android:backgroundTint="#09cde7"
+        android:id="@+id/imageButton10"
+        android:layout_alignTop="@+id/waterstopButton"
+        android:layout_alignLeft="@+id/imageButton11"
+        android:layout_alignStart="@+id/imageButton11" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton11"
+        android:src="@drawable/play"
+        android:backgroundTint="#09cde7"
+        android:layout_above="@+id/waterresetButton"
+        android:layout_alignLeft="@+id/imageButton12"
+        android:layout_alignStart="@+id/imageButton12" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:src="@drawable/restart"
+        android:backgroundTint="#09cde7"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton12"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_alignBottom="@+id/waterresetButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

@@ -17,6 +17,7 @@ public class Water extends ActionBarActivity {
     private Button saveButton;
     private EditText timeRun;
     private EditText phoneNumber;
+    private Button waterHomeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,17 @@ public class Water extends ActionBarActivity {
         saveButton = (Button) findViewById(R.id.watersavephoneNo);
         timeRun = (EditText) findViewById(R.id.watertime);
         phoneNumber = (EditText) findViewById(R.id.waterphoneNo);
+        waterHomeButton = (Button) findViewById(R.id.waterHomeButton);
+
+
+        waterHomeButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        goHome(waterHomeButton);
+                    }
+                }
+        );
+
 
 
         saveButton.setOnClickListener(saveButtonListener);
@@ -72,6 +84,12 @@ public class Water extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goHome(View waterHomeButton) {
+        Intent intent = new Intent(this, MainActivity.class);
+
+        startActivity(intent);
     }
 
 

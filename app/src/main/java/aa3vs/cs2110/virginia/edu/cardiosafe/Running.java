@@ -17,6 +17,7 @@ public class Running extends ActionBarActivity {
     private Button saveButton;
     private EditText timeRun;
     private EditText phoneNumber;
+    private Button homeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,16 @@ public class Running extends ActionBarActivity {
 
 
         saveButton.setOnClickListener(saveButtonListener);
+
+        homeButton = (Button) findViewById(R.id.homeButton);
+
+        homeButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        goHome(homeButton);
+                    }
+                }
+        );
 
 
     }
@@ -76,5 +87,10 @@ public class Running extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void goHome(View homeButton) {
+        Intent intent = new Intent(this, MainActivity.class);
+
+        startActivity(intent);
+    }
 
 }
