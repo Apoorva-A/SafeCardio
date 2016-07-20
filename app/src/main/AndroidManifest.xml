@@ -55,6 +55,26 @@
                 android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
         </activity>
         <activity
+            android:name=".HowTo"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aa3vs.cs2110.virginia.edu.cardiosafe.MainActivity" />
+        </activity>
+        <activity
             android:name=".CountDown"
             android:parentActivityName=".Running">
             <intent-filter>

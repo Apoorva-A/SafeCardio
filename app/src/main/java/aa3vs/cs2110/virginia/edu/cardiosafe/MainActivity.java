@@ -20,6 +20,9 @@ public class MainActivity extends ActionBarActivity {
         //Buttons and their listeners
         final Button runButton = (Button) findViewById(R.id.runButton);
         final Button waterButton = (Button) findViewById(R.id.waterButton);
+        final Button howToButton = (Button) findViewById(R.id.howTo);
+        final Button aboutButton = (Button) findViewById(R.id.about);
+
 
         runButton.setOnClickListener(
                 new Button.OnClickListener() {
@@ -32,6 +35,20 @@ public class MainActivity extends ActionBarActivity {
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         openWaterOptions(waterButton);
+                    }
+                }
+        );
+        howToButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        openHowTo(howToButton);
+                    }
+                }
+        );
+        aboutButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        openAbout(aboutButton);
                     }
                 }
         );
@@ -69,6 +86,17 @@ public class MainActivity extends ActionBarActivity {
 
     public void openWaterOptions(View waterButton) {
         Intent intent = new Intent(this, Water.class);
+
+        startActivity(intent);
+    }
+
+    public void openHowTo(View howToButton) {
+        Intent intent = new Intent(this, HowTo.class);
+
+        startActivity(intent);
+    }
+    public void openAbout(View aboutButton) {
+        Intent intent = new Intent(this, About.class);
 
         startActivity(intent);
     }
