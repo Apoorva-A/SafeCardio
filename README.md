@@ -1,7 +1,7 @@
-# SafeCardio
-SafeCardio Android Application, available on Google Play
+# CardioSafe
+CardioSafe Android Application, available on Google Play
 
-SafeCardio helps those who exercise by both checking to see if they have fallen while running and also checking to 
+CardioSafe helps those who exercise by both checking to see if they have fallen while running and also checking to 
 see if they've been gone longer than they should've been.
 
 This application, written using Java and Android Studio, accomplishes this by implementing a timer that resets as a
